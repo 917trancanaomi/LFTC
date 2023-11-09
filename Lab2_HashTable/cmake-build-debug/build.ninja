@@ -39,7 +39,7 @@ include CMakeFiles/rules.ninja
 #############################################
 # Logical path to working directory; prefix for absolute paths.
 
-cmake_ninja_workdir = C$:/Users/Naomi/Desktop/lftc/LFTC/Lab2_HashTable/cmake-build-debug/
+cmake_ninja_workdir = C$:/Users/Naomi/Desktop/University$ Year$ 3/lftc/LFTC/Lab2_HashTable/cmake-build-debug/
 # =============================================================================
 # Object build statements for EXECUTABLE target Lab2_HashTable
 
@@ -49,7 +49,7 @@ cmake_ninja_workdir = C$:/Users/Naomi/Desktop/lftc/LFTC/Lab2_HashTable/cmake-bui
 
 build cmake_object_order_depends_target_Lab2_HashTable: phony || CMakeFiles/Lab2_HashTable.dir
 
-build CMakeFiles/Lab2_HashTable.dir/main.cpp.obj: CXX_COMPILER__Lab2_HashTable_Debug C$:/Users/Naomi/Desktop/lftc/LFTC/Lab2_HashTable/main.cpp || cmake_object_order_depends_target_Lab2_HashTable
+build CMakeFiles/Lab2_HashTable.dir/main.cpp.obj: CXX_COMPILER__Lab2_HashTable_Debug C$:/Users/Naomi/Desktop/University$ Year$ 3/lftc/LFTC/Lab2_HashTable/main.cpp || cmake_object_order_depends_target_Lab2_HashTable
   DEP_FILE = CMakeFiles\Lab2_HashTable.dir\main.cpp.obj.d
   FLAGS = -g -std=gnu++14
   OBJECT_DIR = CMakeFiles\Lab2_HashTable.dir
@@ -57,7 +57,7 @@ build CMakeFiles/Lab2_HashTable.dir/main.cpp.obj: CXX_COMPILER__Lab2_HashTable_D
   TARGET_COMPILE_PDB = CMakeFiles\Lab2_HashTable.dir\
   TARGET_PDB = Lab2_HashTable.pdb
 
-build CMakeFiles/Lab2_HashTable.dir/SymbolTable/SymbolTable.cpp.obj: CXX_COMPILER__Lab2_HashTable_Debug C$:/Users/Naomi/Desktop/lftc/LFTC/Lab2_HashTable/SymbolTable/SymbolTable.cpp || cmake_object_order_depends_target_Lab2_HashTable
+build CMakeFiles/Lab2_HashTable.dir/SymbolTable/SymbolTable.cpp.obj: CXX_COMPILER__Lab2_HashTable_Debug C$:/Users/Naomi/Desktop/University$ Year$ 3/lftc/LFTC/Lab2_HashTable/SymbolTable/SymbolTable.cpp || cmake_object_order_depends_target_Lab2_HashTable
   DEP_FILE = CMakeFiles\Lab2_HashTable.dir\SymbolTable\SymbolTable.cpp.obj.d
   FLAGS = -g -std=gnu++14
   OBJECT_DIR = CMakeFiles\Lab2_HashTable.dir
@@ -65,7 +65,7 @@ build CMakeFiles/Lab2_HashTable.dir/SymbolTable/SymbolTable.cpp.obj: CXX_COMPILE
   TARGET_COMPILE_PDB = CMakeFiles\Lab2_HashTable.dir\
   TARGET_PDB = Lab2_HashTable.pdb
 
-build CMakeFiles/Lab2_HashTable.dir/Scanner/Scanner.cpp.obj: CXX_COMPILER__Lab2_HashTable_Debug C$:/Users/Naomi/Desktop/lftc/LFTC/Lab2_HashTable/Scanner/Scanner.cpp || cmake_object_order_depends_target_Lab2_HashTable
+build CMakeFiles/Lab2_HashTable.dir/Scanner/Scanner.cpp.obj: CXX_COMPILER__Lab2_HashTable_Debug C$:/Users/Naomi/Desktop/University$ Year$ 3/lftc/LFTC/Lab2_HashTable/Scanner/Scanner.cpp || cmake_object_order_depends_target_Lab2_HashTable
   DEP_FILE = CMakeFiles\Lab2_HashTable.dir\Scanner\Scanner.cpp.obj.d
   FLAGS = -g -std=gnu++14
   OBJECT_DIR = CMakeFiles\Lab2_HashTable.dir
@@ -97,7 +97,7 @@ build Lab2_HashTable.exe: CXX_EXECUTABLE_LINKER__Lab2_HashTable_Debug CMakeFiles
 # Utility command for edit_cache
 
 build CMakeFiles/edit_cache.util: CUSTOM_COMMAND
-  COMMAND = cmd.exe /C "cd /D C:\Users\Naomi\Desktop\lftc\LFTC\Lab2_HashTable\cmake-build-debug && "C:\Program Files\JetBrains\CLion 2021.3.3\bin\cmake\win\bin\cmake.exe" -E echo "No interactive CMake dialog available.""
+  COMMAND = cmd.exe /C "cd /D "C:\Users\Naomi\Desktop\University Year 3\lftc\LFTC\Lab2_HashTable\cmake-build-debug" && "C:\Program Files\JetBrains\CLion 2021.3.3\bin\cmake\win\bin\cmake.exe" -E echo "No interactive CMake dialog available.""
   DESC = No interactive CMake dialog available...
   restat = 1
 
@@ -108,7 +108,7 @@ build edit_cache: phony CMakeFiles/edit_cache.util
 # Utility command for rebuild_cache
 
 build CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = cmd.exe /C "cd /D C:\Users\Naomi\Desktop\lftc\LFTC\Lab2_HashTable\cmake-build-debug && "C:\Program Files\JetBrains\CLion 2021.3.3\bin\cmake\win\bin\cmake.exe" --regenerate-during-build -SC:\Users\Naomi\Desktop\lftc\LFTC\Lab2_HashTable -BC:\Users\Naomi\Desktop\lftc\LFTC\Lab2_HashTable\cmake-build-debug"
+  COMMAND = cmd.exe /C "cd /D "C:\Users\Naomi\Desktop\University Year 3\lftc\LFTC\Lab2_HashTable\cmake-build-debug" && "C:\Program Files\JetBrains\CLion 2021.3.3\bin\cmake\win\bin\cmake.exe" --regenerate-during-build -S"C:\Users\Naomi\Desktop\University Year 3\lftc\LFTC\Lab2_HashTable" -B"C:\Users\Naomi\Desktop\University Year 3\lftc\LFTC\Lab2_HashTable\cmake-build-debug""
   DESC = Running CMake to regenerate build system...
   pool = console
   restat = 1
@@ -126,7 +126,7 @@ build Lab2_HashTable: phony Lab2_HashTable.exe
 # =============================================================================
 
 #############################################
-# Folder: C:/Users/Naomi/Desktop/lftc/LFTC/Lab2_HashTable/cmake-build-debug
+# Folder: C:/Users/Naomi/Desktop/University Year 3/lftc/LFTC/Lab2_HashTable/cmake-build-debug
 
 build all: phony Lab2_HashTable.exe
 

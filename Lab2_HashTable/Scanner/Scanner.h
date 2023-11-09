@@ -15,10 +15,25 @@ class Scanner {
 private:
     SymbolTable st_identifiers;
     SymbolTable st_constants;
+    vector<string> keywords;
+    vector<pair<string, int>> PIF;
+
+    string regexIdentifiers = "[a-zA-Z]{1}([a-zA-Z0-9])*";
+    string regexInt = "(0|[+-]?[1-9]([1-9])*";
+    string regexChar = "\'[a-zA-Z0-9]{1}\'";
+    string regexString ="\"([a-zA-Z0-9])*\"";
+
+    void genPIF(const string& token, int index);
+
+    void writeOutput();
+
+    void tokensPopulate();
 
 public:
 
-    void scanning();
+    Scanner();
+
+    void scanning(const string& filepath);
 };
 
 

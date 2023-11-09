@@ -1,0 +1,29 @@
+//p1
+//find the minimum of 3 numbers
+
+int a; 
+int b;
+int c;
+int minim;
+
+scanf(a);
+scanf(b);
+scanf(c);
+if(a<b){
+	if(a<c){ 
+		minim=a;
+    }
+	else{
+		minim=c;
+    }
+}
+else{
+	if(b<c){
+		minim=b;
+    }
+	else{
+		minim=c;
+    }
+}
+
+printf(minim);

@@ -1,0 +1,20 @@
+program = "BEGIN" statement-list "END"
+statement-list = statement | statement ";" statement-list
+statement = statement-simple | statement-structured
+statement-simple = declaration-statement | assignment-statement | iostatement
+iostatement = input-statement | output-statement
+input-statement = "scanf" "(" identifier ")"
+output-statement = "printf" "(" expression ")"
+declaration-statement = "type" "identifier"
+type = type-basic | array
+type-basic = "char" | "int" | "string"
+array = type-basic "[" integer "]"
+assignment-statement = identifier "=" expression
+expression = expression operator term | term
+term = term operator factor | factor
+factor = identifier | contant | "(" expression ")"
+operator = "+" | "-" | "/" | "*"
+if-statement = "IF" "(" condition ")" "{" statement-list "}"
+while-statement = "WHILE" "(" condition ")" "{" statement-list "}"
+condition = expression relation expression
+relation = "<" | "<=" | "==" | "<>" | ">=" | ">"

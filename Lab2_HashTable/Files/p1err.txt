@@ -1,0 +1,30 @@
+//p1err
+//find the minimum of 3 numbers
+///errors: using _ is not in th alphabet, identifiers cannot start with digits, if1 is not a reserved word
+
+int a; 
+int 23b;
+int c_;
+int minim;
+
+scanf(a);
+scanf(b);
+scanf(c);
+if(a<b){
+	if1(a<c){ 
+		minim=a;
+    }
+	else{
+		minim=c;
+    }
+}
+else{
+	if(b<c){
+		minim=b;
+    }
+	else{
+		minim=c;
+    }
+}
+
+printf(minim);

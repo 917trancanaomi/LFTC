@@ -1,0 +1,35 @@
+//p2 
+//Check if a number is prime
+
+int n;
+int i;
+int isPrime;
+isPrime = 0;
+  scanf(n);
+if (n == 0){
+    isPrime = 1;
+}
+if (n == 1){
+	isPrime = 1;
+}
+
+i = 2;
+while(i <= n){ 
+	if (n % i == 0){
+        	isPrime = 1;
+    }
+    i = i + 1;
+
+}
+string messagePrime;
+messagePrime = "is a prime number";
+string messageNotPrime;
+messagePrime = "is not a prime number";
+if (isPrime == 0){
+	printf(n);
+    printf(messagePrime);
+}
+else{
+	printf(n);
+    printf(messageNotPrime);
+}

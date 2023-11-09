@@ -1,0 +1,29 @@
+Alphabet:
+
+- upper (A-Z) and lower case letters (a-z) of the english alphabet
+- decimal digits (0-9)
+- underline '_'
+
+Lexic:
+
+a.Special symbols:
+ - operators + - * / = < <= = >= <> % += -= *= /= == !
+ - separators [] {} () ; space
+ - reserved words:
+	char do if else int while begin end printf scanf break void return const
+b.Identifiers 
+ - identifier = letter|{letter|digit}
+ - letter = "A"|"B"|...|"Z"|"a"|"b"|...|"z"
+ - digit = "0"|"1"|...|"9"
+
+c.Constants
+1. integer
+ - integer = "0"|["+"|"-"]nonzerodigit{digit}
+ - nonzerodigit = "1"|"2"|...|"9"
+ - digit = "0"|nonzerodigit
+2. character 
+ - character = "'"[letter|digit]"'"
+ - letter = "A"|"B"|...|"Z"|"a"|"b"|...|"z"
+ - digit = "0"|"1"|...|"9" 
+3. string
+ - string = """ {character} """

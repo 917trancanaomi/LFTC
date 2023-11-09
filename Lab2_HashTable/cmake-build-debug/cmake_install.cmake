@@ -1,4 +1,4 @@
-# Install script for directory: C:/Users/Naomi/Desktop/lftc/LFTC/Lab2_HashTable
+# Install script for directory: C:/Users/Naomi/Desktop/University Year 3/lftc/LFTC/Lab2_HashTable
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "C:/Users/Naomi/Desktop/lftc/LFTC/Lab2_HashTable/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "C:/Users/Naomi/Desktop/University Year 3/lftc/LFTC/Lab2_HashTable/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
