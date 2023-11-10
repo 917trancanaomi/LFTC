@@ -2,9 +2,7 @@ token | position
 int | 0
 id | 97
 int | 0
-id | 98
 int | 0
-id | 99
 int | 0
 id | 23
 scanf | 0
@@ -16,7 +14,7 @@ id | 99
 if | 0
 id | 97
 id | 98
-if | 0
+id | 50
 id | 97
 id | 99
 id | 23

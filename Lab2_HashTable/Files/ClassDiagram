@@ -1,0 +1,49 @@
+@startuml
+struct HashEntry<T> {
+ + token: T
+ + next: Int
+}
+
+class HashTable<T> {
+ - table: vector<HashEntry<T>>
+ - sice: Int
+ - int hashFn(T element)
+ - int findNextPositionAvailable()
+ + HashTable()
+ + HashTable(HashTable &hTable)
+ + int addValue(T element);
+ + int findPosition(T element);
+ + int containsValue(T element);
+ + int deleteValue(T element);
+ + string toString();
+}
+
+class SymbolTable{
+ - hashTable: HashTable<string>
+ + SymbolTable()
+ + int findPosition(string token)
+ + int deleteToken(string token)
+ + int addToken(string token)
+ + string toString()
+}
+
+class Scanner{
+- st_identifiers: SymbolTable
+- st_constants: SymbolTable
+- keywords: vector<string>
+- PIT: vector<pair<string, int>>
+- regexIdentifiers: String
+- regexInt: String
+- regexChar: String
+- regexString: String
+- bool genPIF(const string& token, int index)
+- void writeOutput()
+- void tokensPopulate()
++ Scanner()
++ void scanning(const string& filepath);
+}
+
+SymbolTable --* Scanner: 2
+HashTable --* SymbolTable: 1
+
+HashEntry --* HashTable: 0..*

@@ -37,7 +37,7 @@ void testHashTable() {
 int main() {
     //testHashTable();
     Scanner ST;
-    string fileName = "C:\\Users\\Naomi\\Desktop\\University Year 3\\lftc\\LFTC\\Lab2_HashTable\\Files\\p1.txt";
+    string fileName = "C:\\Users\\Naomi\\Desktop\\University Year 3\\lftc\\LFTC\\Lab2_HashTable\\Files\\p1err.txt";
     ST.scanning(fileName);
     return 0;
 }
