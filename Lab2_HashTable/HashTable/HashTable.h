@@ -39,6 +39,8 @@ public:
 
     int deleteValue(T element);
 
+    string toString();
+
 };
 
 
@@ -134,6 +136,20 @@ int HashTable<T>::deleteValue(T element) {
 
         return pos;
     }
+}
+
+template<class T>
+string HashTable<T>::toString() {
+    string outputString = "";
+
+    for(int i=0; i<size; i++) {
+        if(table[i].token != "")
+        {
+            outputString += to_string(i) + " " + table[i].token + "\n";
+        }
+    }
+
+    return outputString;
 }
 
 #endif //LAB2_HASHTABLE_HASHTABLE_H

@@ -1,0 +1,9 @@
+Hashtable that uses coalesced chaining to handle collisions 
+Constants Symbol Table 
+
+Identifiers Symbol table 
+23 minim
+97 a
+98 b
+99 c
+

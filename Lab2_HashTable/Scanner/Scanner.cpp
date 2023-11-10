@@ -4,6 +4,7 @@
 
 #include <regex>
 #include <iostream>
+#include <algorithm>
 #include <fstream>
 #include <vector>
 #include <string>
@@ -32,12 +33,14 @@ void Scanner::tokensPopulate() {
 }
 
 void Scanner::scanning(const string& filepath) {
+
     ifstream ipFile(filepath);
 
     char operators[] = "!%/*=<>+";
-    char separators[] = "{}[]();";
+    char separators[] = "{}[](); ";
     char lines[100];
     int onLine = 1;
+    bool ok = true;
 
     while(ipFile.getline(lines, 100)){
         string token;
@@ -46,11 +49,15 @@ void Scanner::scanning(const string& filepath) {
         for (int i = 0; i < lineLength; i++) {
             char thisChar = lines[i];
 
-            if(strchr("\n\t", thisChar) != nullptr) {
-                genPIF(token, onLine);
+            if(strchr("\n\t ", thisChar) != nullptr) {
+                if (!genPIF(token, onLine)){
+                    ok = false;
+                }
                 token.clear();
             } else if(strchr(operators, thisChar) != nullptr) {
-                genPIF(token, onLine);
+                if (!genPIF(token, onLine)){
+                    ok = false;
+                }
                 token.clear();
 
                 string operatorToken;
@@ -63,21 +70,83 @@ void Scanner::scanning(const string& filepath) {
                         operatorToken.push_back('=');
                         i++;
                     }
-                    genPIF(operatorToken, onLine);
+                    if (!genPIF(token, onLine)){
+                        ok = false;
+                    }
                 }
+            } else if(strchr(separators, thisChar) != nullptr) {
+                if (!genPIF(token, onLine)){
+                    ok = false;
+                }
+                token.clear();
+
             } else {
-                token.push_back(thisChar);
-            }
+                    token.push_back(thisChar);
+                }
+
         }
 
-        genPIF(token, onLine);
+        if (!genPIF(token, onLine)){
+            ok = false;
+        }
         token.clear();
         onLine++;
     }
 
+    if (ok == true ) {
+        cout << "Lexically correct";
+    }
     ipFile.close();
-    cout<<"lexically correct"<<endl;
     writeOutput();
 }
 
+bool Scanner::genPIF(const string& token, int line) {
+    if (!token.empty()) {
+        if (find(keywords.begin(), keywords.end(), token) != keywords.end()) {
+            PIF.emplace_back(make_pair(token, 0));
+        } else {
+            if (regex_match(token, regex(regexIdentifiers))) {
+                int index = st_identifiers.findPosition(token);
+                PIF.emplace_back(make_pair("id", index));
+            } else if (regex_match(token, regex(regexInt))) {
+                int index = st_constants.findPosition(token);
+                PIF.emplace_back(make_pair("const", index));
+            } else if (regex_match(token, regex(regexChar)) || regex_match(token, regex(regexString))) {
+                int index = st_constants.findPosition(token);
+                PIF.emplace_back(make_pair("const", index));
+            } else {
+                cout << "Lexical error! Unidentified token " << token << " on line " << line << endl;
+                return false;
 
+            }
+        }
+    }
+    return true;
+
+}
+
+void Scanner::writeOutput() {
+    ofstream STOutput;
+    ofstream PIFOutput;
+
+    STOutput.open("C:\\Users\\Naomi\\Desktop\\University Year 3\\lftc\\LFTC\\Lab2_HashTable\\Files\\ST.out");
+    PIFOutput.open("C:\\Users\\Naomi\\Desktop\\University Year 3\\lftc\\LFTC\\Lab2_HashTable\\Files\\PIF.out");
+
+    string STConst = st_constants.toString();
+    string STId = st_identifiers.toString();
+
+    STOutput << "Hashtable that uses coalesced chaining to handle collisions " <<"\n";
+    STOutput << "Constants Symbol Table \n";
+    STOutput << STConst << "\n";
+    STOutput << "Identifiers Symbol table \n";
+    STOutput << STId << "\n";
+
+    PIFOutput << "token" << " | " <<  "position\n";
+
+    for(auto &i: PIF) {
+        PIFOutput << i.first << " | " << i.second << "\n";
+    }
+
+    STOutput.close();
+    PIFOutput.close();
+}

@@ -1,13 +1,9 @@
-//p3 
-//Check the maximum of n numbers
-
-
 int n;
 int i;
 int[20] array;
 int maximum = 0;
 string outputMessage;
-outputMessage = "The maximum integer from the given array is ";
+outputMessage = "TheMaximumIntegerFromTheGivenArrayIs";
 scanf(n);
 i = 0
 while(i<n){
@@ -17,7 +13,7 @@ while(i<n){
 
 i=0
 while(i<n){
-	if(array[i] > maximum){ 
+	if(array[i]>maximum){
 			maximum = array[i];
     }       
     i=i+1;

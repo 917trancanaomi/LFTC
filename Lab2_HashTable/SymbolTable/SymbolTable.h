@@ -25,6 +25,8 @@ public:
     int deleteToken(string token);
 
     int addToken(string token);
+
+    string toString();
 };
 
 #endif //LAB2_HASHTABLE_SYMBOLTABLE_H

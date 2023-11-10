@@ -1,7 +1,4 @@
-//p1
-//find the minimum of 3 numbers
-
-int a; 
+int a;
 int b;
 int c;
 int minim;
