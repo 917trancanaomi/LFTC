@@ -1,6 +1,8 @@
 #include <iostream>
 #include "HashTable/HashTable.h"
 #include "Scanner/Scanner.h"
+#include "FiniteAutomaton/FiniteAutomaton.h"
+
 using namespace std;
 void testHashTable() {
     HashTable<string> hashTable;
@@ -36,8 +38,63 @@ void testHashTable() {
 
 int main() {
     //testHashTable();
-    Scanner ST;
-    string fileName = "C:\\Users\\Naomi\\Desktop\\University Year 3\\lftc\\LFTC\\Lab2_HashTable\\Files\\p1err.txt";
-    ST.scanning(fileName);
+
+    int main() {
+        int choice;
+        do {
+            cout << "1. Test HashTable\n";
+            cout << "2. Test Scanner\n";
+            cout << "3. Test Finite Automaton\n";
+            cout << "0. Exit\n";
+            cout << "Enter your choice: ";
+            cin >> choice;
+
+            switch (choice) {
+                case 1:
+                    // Test HashTable
+                    testHashTable();
+                    break;
+                case 2: {
+                    // Test Scanner
+                    Scanner ST;
+                    string fileName = "C:\\Users\\Naomi\\Desktop\\University Year 3\\lftc\\LFTC\\Lab2_HashTable\\Files\\p1err.txt";
+                    ST.scanning(fileName);
+                    break;
+                }
+                case 3: {
+                    // Test Finite Automaton
+                    FiniteAutomaton finiteAutomaton("FA.in");
+                    finiteAutomaton.readFromFile();
+
+                    // Display elements of the Finite Automaton
+                    finiteAutomaton.displayElements();
+
+                    // Test a sequence with the Finite Automaton
+                    std::string sequence;
+                    cout << "Enter a sequence to test: ";
+                    cin >> sequence;
+
+                    if (finiteAutomaton.verifySequence(sequence)) {
+                        std::cout << "Sequence '" << sequence << "' is accepted by the Finite Automaton.\n";
+                    } else {
+                        std::cout << "Sequence '" << sequence << "' is not accepted by the Finite Automaton.\n";
+                    }
+                    break;
+                }
+                case 0:
+                    cout << "Exiting...\n";
+                    break;
+                default:
+                    cout << "Invalid choice. Please try again.\n";
+                    break;
+            }
+        } while (choice != 0);
+
+        return 0;
+    }
+
+//    Scanner ST;
+//    string fileName = "C:\\Users\\Naomi\\Desktop\\University Year 3\\lftc\\LFTC\\Lab2_HashTable\\Files\\p1err.txt";
+//    ST.scanning(fileName);
     return 0;
 }

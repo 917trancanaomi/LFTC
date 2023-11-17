@@ -3,4 +3,4 @@ project(Lab2_HashTable)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(Lab2_HashTable main.cpp HashTable/HashTable.h SymbolTable/SymbolTable.h SymbolTable/SymbolTable.cpp Scanner/Scanner.h Scanner/Scanner.cpp)
+add_executable(Lab2_HashTable main.cpp HashTable/HashTable.h SymbolTable/SymbolTable.h SymbolTable/SymbolTable.cpp Scanner/Scanner.h Scanner/Scanner.cpp FiniteAutomaton/FiniteAutomaton.cpp FiniteAutomaton/FiniteAutomaton.h)
