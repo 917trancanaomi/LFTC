@@ -105,13 +105,10 @@ bool Scanner::genPIF(const string& token, int line) {
         if (find(keywords.begin(), keywords.end(), token) != keywords.end()) {
             PIF.emplace_back(make_pair(token, 0));
         } else {
-            if (regex_match(token, regex(regexIdentifiers))) {
+            if (identifierFA.verifySequence(token)) {
                 int index = st_identifiers.findPosition(token);
                 PIF.emplace_back(make_pair("id", index));
-            } else if (regex_match(token, regex(regexInt))) {
-                int index = st_constants.findPosition(token);
-                PIF.emplace_back(make_pair("const", index));
-            } else if (regex_match(token, regex(regexChar)) || regex_match(token, regex(regexString))) {
+            } else if (integerFA.verifySequence(token)) {
                 int index = st_constants.findPosition(token);
                 PIF.emplace_back(make_pair("const", index));
             } else {

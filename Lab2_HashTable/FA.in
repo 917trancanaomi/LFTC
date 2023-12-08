@@ -1,5 +1,8 @@
-states
-alphabet
-initial state
-final states
-transitions
+P Q R
+0 1
+P
+R
+P 0 P
+P 1 Q
+Q 1 R
+R 1 R

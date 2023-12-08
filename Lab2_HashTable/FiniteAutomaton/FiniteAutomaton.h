@@ -5,7 +5,6 @@
 #ifndef MAIN_CPP_FINITEAUTOMATON_H
 #define MAIN_CPP_FINITEAUTOMATON_H
 
-
 #include <vector>
 #include <string>
 
